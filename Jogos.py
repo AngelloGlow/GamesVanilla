@@ -19,8 +19,7 @@ def games():
     [{3}1{0}] PEDRA PAPEL OU TESOURA
     [{3}2{0}] ADIVINHE O NÚMERO
     [{3}3{0}] PARA ENCERRAR O PROGRAMA'''.format(semcor,ciano,roxo,branco))
-    game = ''
-    while game != '3':
+    while True:
         game = input('')
         if game == '1':
             sleep(1.5)
@@ -50,8 +49,7 @@ def iniciar():
     print('''{1}Você esta pronto para começar o {4}GAME{0}?{0}
     [{2}S{0}] SIM
     [{3}N{0}] NÃO'''.format(semcor,ciano,verde,vermelho,roxo))
-    res = ''
-    while res != 's' and res != 'n':
+    while True:
         res = input('').lower()
         if res == 's':
             break
@@ -60,8 +58,7 @@ def iniciar():
             [{2}1{0}] Voltar ao menu de {3}GAMES{0}
             [{2}2{0}] Esta pronto para o {3}GAME{0}
             [{2}3{0}] Caso deseja encerrar o programa'''.format(semcor,ciano,branco,roxo))
-            subres = ''
-            while subres != '3':
+            while True:
                 subres = input('')
                 if subres == '1':
                     games()
@@ -111,8 +108,7 @@ def an():
         [{2}2{0}] {4}MEDIO{0} de 1 a 15 com 5 tentativas
         [{2}3{0}] {5}DIFICIL{0} de 1 a 25 com 5 tentativas
         [{2}4{0}] Voltar ao menu de {6}GAMES{0}'''.format(semcor,ciano,branco,verde,amarelo,vermelho,roxo))
-        dif = 0
-        while dif != 3:
+        while True:
             dif = input('')
             if dif == '1':
                 print('{}PENSANDO EM UM NUMERO DE 1 A 5...{}'.format(verde,semcor))
